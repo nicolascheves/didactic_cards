@@ -1,0 +1,28 @@
+<?php require_once 'layout/header.phtml'; ?>
+
+<main class="content-wrapper">
+    <div class="login-page">
+        <form action="<?= BASE_URL ?>agregar-flashcard" method="POST" class="login-form" id="agregar-flashcard">
+            <h2>Agregar nueva tarjeta</h2>
+
+            <div class="form-group">
+                <label for="question">Pregunta:</label>
+                <input type="text" name="question" id="question" placeholder="¿Qué es la encapsulación?" required>
+            </div>
+
+            <div class="form-group">
+                <label for="answer">Respuesta:</label>
+                <textarea name="answer" id="answer" rows="5" placeholder="La encapsulación agrupa datos y comportamientos..." required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="topic">Tema:</label>
+                <input type="text" name="topic" id="topic" value="General" placeholder="Programación, Historia, Matemática...">
+            </div>
+
+            <button type="submit" class="btn btn-primary">Guardar tarjeta</button>
+        </form>
+    </div>
+</main>
+
+<?php require_once 'layout/footer.phtml'; ?>

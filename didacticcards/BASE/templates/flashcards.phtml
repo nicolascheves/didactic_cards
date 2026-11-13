@@ -1,0 +1,30 @@
+<?php
+
+class FlashcardView
+{
+    public function showFlashcards($flashcards)
+    {
+        require_once './templates/form.add.flashcard.phtml';
+        require_once './templates/flashcards.phtml';
+    }
+
+    public function showAddFlashcardForm()
+    {
+        require_once './templates/form.add.flashcard.phtml';
+    }
+
+    public function showEditFlashcardForm($flashcard)
+    {
+        require_once './templates/form.edit.flashcard.phtml';
+    }
+
+    public function showFlashcardDetail($flashcard)
+    {
+        require_once './templates/flashcard.detail.phtml';
+    }
+
+    public function showError($error)
+    {
+        echo '<h1>' . htmlspecialchars($error, ENT_QUOTES, 'UTF-8') . '</h1>';
+    }
+}
